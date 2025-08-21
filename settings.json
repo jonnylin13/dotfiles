@@ -25,11 +25,5 @@
       "before": ["g", "i"],
       "commands": ["editor.action.goToImplementation"]
     }
-  ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["g", "i"],
-      "commands": ["editor.action.goToImplementation"]
-    }
   ]
 }
