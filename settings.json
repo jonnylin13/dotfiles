@@ -1,1 +1,35 @@
-/Users/jonny/Library/Application Support/Code/User/settings.json
+{
+  "editor.lineNumbers": "relative",
+  "editor.fontSize": 12,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "redhat.telemetry.enabled": true,
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "customizeUI.activityBar": "bottom",
+  "customizeUI.activityBarHideSettings": true,
+  "customizeUI.stylesheet": {
+    ".tabs-and-actions-container .editor-actions": "display: none !important;"
+  },
+  "editor.minimap.autohide": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.inlineSuggest.edits.showCollapsed": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.advanced": {},
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    }
+  ]
+}
