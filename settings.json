@@ -1,5 +1,5 @@
 {
-  "editor.lineNumbers": "relative",
+  "editor.lineNumbers": "on",
   "editor.fontSize": 12,
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
@@ -14,7 +14,7 @@
   "customizeUI.stylesheet": {
     ".tabs-and-actions-container .editor-actions": "display: none !important;"
   },
-  "editor.minimap.autohide": true,
+  "editor.minimap.autohide": "mouseover",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.inlineSuggest.edits.showCollapsed": true,
