@@ -1,6 +1,24 @@
 CHROME_BUILD_PATH=~/Documents/chrome-ext-build
 FIREFOX_BUILD_PATH=~/Documents/firefox-ext-build
 BUILD_PATH=~/dev/chrome-extension/build
+EXT_SRC_PATH=~/dev/chrome-extension
+
+build_ext() {
+  local build_opt=$1
+  local env_opt=$2
+
+  if [[ ! -d "$EXT_SRC_PATH" ]]; then
+    echo "Source path not found 🚫: $EXT_SRC_PATH"
+    return 1
+  fi
+
+  echo "Building extension with options: build_opt=$build_opt, env_opt=$env_opt"
+
+  cd "$EXT_SRC_PATH"
+  node ./.artifacts/build.js "$build_opt" "$env_opt"
+
+  echo "Build complete ✅. Output at $BUILD_PATH"
+}
 
 deploy_ext() {
   local target_path=$1
@@ -24,6 +42,7 @@ deploy_ext() {
   echo "Deployed ✅ -> $target_path"
 }
 
-# correct aliases
-alias deploy_chrome='deploy_ext "$CHROME_BUILD_PATH"'
-alias deploy_ff='deploy_ext "$FIREFOX_BUILD_PATH"'
+alias sxdc='deploy_ext "$CHROME_BUILD_PATH"'
+alias sxdf='deploy_ext "$FIREFOX_BUILD_PATH"'
+alias sxbdc='build_ext 12 2; sxdc'
+alias sxbdf='build_ext 15 2; sxdf'
