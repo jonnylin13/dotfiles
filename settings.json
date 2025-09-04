@@ -1,5 +1,5 @@
 {
-  "editor.lineNumbers": "on",
+  "editor.lineNumbers": "relative",
   "editor.fontSize": 12,
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
@@ -25,5 +25,6 @@
       "before": ["g", "i"],
       "commands": ["editor.action.goToImplementation"]
     }
-  ]
+  ],
+  "workbench.colorTheme": "Palenight (Mild Contrast)"
 }

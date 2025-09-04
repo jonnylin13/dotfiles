@@ -1,0 +1,29 @@
+CHROME_BUILD_PATH=~/Documents/chrome-ext-build
+FIREFOX_BUILD_PATH=~/Documents/firefox-ext-build
+BUILD_PATH=~/dev/chrome-extension/build
+
+deploy_ext() {
+  local target_path=$1
+  local src="$BUILD_PATH"
+
+  # sanity checks
+  if [[ -z "$target_path" ]]; then
+    echo "Failed 🚫 (empty target path)"; return 1
+  fi
+  if [[ ! -d "$src" ]]; then
+    echo "Failed 🚫 (build dir not found: $src)"; return 1
+  fi
+  if [[ "$target_path" == "/" ]]; then
+    echo "Failed 🚫 (refusing to rm '/')"; return 1
+  fi
+
+  # deploy
+  rm -rf -- "$target_path"
+  mkdir -p -- "$target_path"
+  cp -a -- "$src"/. "$target_path"/
+  echo "Deployed ✅ -> $target_path"
+}
+
+# correct aliases
+alias deploy_chrome='deploy_ext "$CHROME_BUILD_PATH"'
+alias deploy_ff='deploy_ext "$FIREFOX_BUILD_PATH"'

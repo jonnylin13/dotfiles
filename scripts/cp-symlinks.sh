@@ -9,4 +9,11 @@ for file in "$SCRIPT_DIR"/../symlinks/*; do
   fi
 done
 
+for file in "$SCRIPT_DIR"/../symlinks/.*; do
+  [ -e "$file" ] || continue
+  if [ -L "$file" ]; then
+    cp -L "$file" "$SCRIPT_DIR"/../
+  fi
+done
+
 echo "Symlinks copied successfully."
