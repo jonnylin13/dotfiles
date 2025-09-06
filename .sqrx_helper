@@ -45,4 +45,4 @@ deploy_ext() {
 alias sxdc='deploy_ext "$CHROME_BUILD_PATH"'
 alias sxdf='deploy_ext "$FIREFOX_BUILD_PATH"'
 alias sxbdc='build_ext 12 2; sxdc'
-alias sxbdf='build_ext 15 2; sxdf'
+alias sxbdf='build_ext 13 2; sxdf'
