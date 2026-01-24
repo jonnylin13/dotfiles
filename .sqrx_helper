@@ -44,5 +44,7 @@ deploy_ext() {
 
 alias sxdc='deploy_ext "$CHROME_BUILD_PATH"'
 alias sxdf='deploy_ext "$FIREFOX_BUILD_PATH"'
+alias sxda='cd $BUILD_PATH; web-ext run -t firefox-android --adb-device emulator-5554 --firefox-apk org.mozilla.firefox --adb-remove-old-artifacts --verbose; cd -'
 alias sxbdc='build_ext 12 2; sxdc'
 alias sxbdf='build_ext 13 2; sxdf'
+alias sxbda='build_ext 13 2; sxda'

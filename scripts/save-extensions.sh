@@ -2,4 +2,4 @@
 
 echo "Saving VSCode extensions..."
 code --list-extensions > "$HOME"/dev/dotfiles/code_extensions
-echo "Saved ✅ "
+echo "Saved VSCode extensions ✅ "

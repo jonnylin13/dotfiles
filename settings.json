@@ -1,5 +1,5 @@
 {
-  "editor.lineNumbers": "on",
+  "editor.lineNumbers": "relative",
   "editor.fontSize": 12,
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
@@ -9,22 +9,170 @@
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
   "security.workspace.trust.untrustedFiles": "open",
-  "customizeUI.activityBar": "bottom",
-  "customizeUI.activityBarHideSettings": true,
-  "customizeUI.stylesheet": {
-    ".tabs-and-actions-container .editor-actions": "display: none !important;"
-  },
   "editor.minimap.autohide": "mouseover",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.inlineSuggest.edits.showCollapsed": true,
   "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.advanced": {},
-  "vim.normalModeKeyBindings": [
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "extensions.experimental.affinity": {
+    "vscode.vim": 1
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["g", "i"],
-      "commands": ["editor.action.goToImplementation"]
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ]
     }
   ],
-  "workbench.colorTheme": "Palenight (Mild Contrast)"
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "g",
+        "i"
+      ],
+      "commands": [
+        "editor.action.goToImplementation"
+      ]
+    },
+    // Harpoon config
+    {
+      "before": [
+        "<leader>",
+        "a"
+      ],
+      "commands": [
+        "vscode-harpoon.addEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "vscode-harpoon.editEditors"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "e"
+      ],
+      "commands": [
+        "vscode-harpoon.editorQuickPick"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "1"
+      ],
+      "commands": [
+        "vscode-harpoon.gotoEditor1"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "2"
+      ],
+      "commands": [
+        "vscode-harpoon.gotoEditor2"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "3"
+      ],
+      "commands": [
+        "vscode-harpoon.gotoEditor3"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "4"
+      ],
+      "commands": [
+        "vscode-harpoon.gotoEditor4"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "5"
+      ],
+      "commands": [
+        "vscode-harpoon.gotoEditor5"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "6"
+      ],
+      "commands": [
+        "vscode-harpoon.gotoEditor6"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "7"
+      ],
+      "commands": [
+        "vscode-harpoon.gotoEditor7"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "8"
+      ],
+      "commands": [
+        "vscode-harpoon.gotoEditor8"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "9"
+      ],
+      "commands": [
+        "vscode-harpoon.gotoEditor9"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "0"
+      ],
+      "commands": [
+        "vscode-harpoon.gotoEditor10"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Enables commenting in visual mode
+    {
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ],
+      "when": "editorTextFocus && !editorReadonly"
+    }
+  ],
+  "workbench.colorTheme": "Palenight (Mild Contrast)",
 }

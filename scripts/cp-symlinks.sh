@@ -16,4 +16,4 @@ for file in "$SCRIPT_DIR"/../symlinks/.*; do
   fi
 done
 
-echo "Symlinks copied successfully."
+echo "Symlinks copied successfully ✅"
