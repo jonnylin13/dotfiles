@@ -2,12 +2,22 @@
 [
   {
     "key": "tab",
+    "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus && vim.mode === 'Normal'"
+  },
+  {
+    "key": "shift+tab",
+    "command": "workbench.action.previousEditor",
+    "when": "editorTextFocus && vim.mode === 'Normal'"
+  },
+  {
+    "key": "tab",
     "command": "tab",
-    "when": "editorTextFocus && !editorTabMovesFocus && !inlineSuggestionVisible"
+    "when": "editorTextFocus && !editorTabMovesFocus && !inlineSuggestionVisible && vim.mode != 'Normal'"
   },
   {
     "key": "shift+tab",
     "command": "outdent",
-    "when": "editorTextFocus && !editorTabMovesFocus && !inlineSuggestionVisible"
+    "when": "editorTextFocus && !editorTabMovesFocus && !inlineSuggestionVisible && vim.mode != 'Normal'"
   },
 ]

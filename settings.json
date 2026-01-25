@@ -1,10 +1,10 @@
 {
-  "editor.lineNumbers": "relative",
+  "editor.lineNumbers": "on",
   "editor.fontSize": 12,
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "redhat.telemetry.enabled": true,
+  "redhat.telemetry.enabled": false,
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
@@ -13,13 +13,13 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.inlineSuggest.edits.showCollapsed": true,
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "github.copilot.advanced": {},
+  "workbench.editor.revealIfOpen": true,
   "vim.leader": "<space>",
   "vim.useSystemClipboard": true,
   "extensions.experimental.affinity": {
     "vscode.vim": 1
   },
+  "vim.smartRelativeLine": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
@@ -28,6 +28,36 @@
       ],
       "commands": [
         "workbench.action.closeOtherEditors"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.splitEditorRight"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
       ]
     }
   ],
@@ -45,7 +75,7 @@
     {
       "before": [
         "<leader>",
-        "a"
+        "a",
       ],
       "commands": [
         "vscode-harpoon.addEditor"
@@ -54,7 +84,7 @@
     {
       "before": [
         "<leader>",
-        "e"
+        "e",
       ],
       "commands": [
         "vscode-harpoon.editEditors"
@@ -63,103 +93,12 @@
     {
       "before": [
         "<leader>",
-        "p",
-        "e"
+        "p"
       ],
       "commands": [
         "vscode-harpoon.editorQuickPick"
       ]
     },
-    {
-      "before": [
-        "<leader>",
-        "1"
-      ],
-      "commands": [
-        "vscode-harpoon.gotoEditor1"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "2"
-      ],
-      "commands": [
-        "vscode-harpoon.gotoEditor2"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "3"
-      ],
-      "commands": [
-        "vscode-harpoon.gotoEditor3"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "4"
-      ],
-      "commands": [
-        "vscode-harpoon.gotoEditor4"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "5"
-      ],
-      "commands": [
-        "vscode-harpoon.gotoEditor5"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "6"
-      ],
-      "commands": [
-        "vscode-harpoon.gotoEditor6"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "7"
-      ],
-      "commands": [
-        "vscode-harpoon.gotoEditor7"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "8"
-      ],
-      "commands": [
-        "vscode-harpoon.gotoEditor8"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "9"
-      ],
-      "commands": [
-        "vscode-harpoon.gotoEditor9"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "0"
-      ],
-      "commands": [
-        "vscode-harpoon.gotoEditor10"
-      ]
-    }
   ],
   "vim.visualModeKeyBindings": [
     // Enables commenting in visual mode
