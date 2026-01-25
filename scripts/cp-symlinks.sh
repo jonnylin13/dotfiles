@@ -1,19 +1,16 @@
 #!/bin/sh
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+set -e
 
-echo "Copying symlinks from $SCRIPT_DIR/../symlinks to $SCRIPT_DIR/../"
+SCRIPT_DIR="$(cd -- "$(dirname -- "$0")" && pwd)"
 
-for file in "$SCRIPT_DIR"/../symlinks/*; do
-  if [ -L "$file" ]; then
-    cp -L "$file" "$SCRIPT_DIR"/../
-  fi
-done
+SRC="$SCRIPT_DIR/../symlinks"
+DST="$SCRIPT_DIR/../config"
 
-for file in "$SCRIPT_DIR"/../symlinks/.*; do
-  [ -e "$file" ] || continue
-  if [ -L "$file" ]; then
-    cp -L "$file" "$SCRIPT_DIR"/../
-  fi
-done
+echo "Copying contents from $SRC to $DST (dereferencing symlinks)"
 
+# Ensure destination exists
+mkdir -p "$DST"
+
+# Copy everything, preserving structure, following symlinks
+rsync -aL --safe-links "$SRC"/ "$DST"/
 echo "Symlinks copied successfully ✅"
