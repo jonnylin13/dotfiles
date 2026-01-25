@@ -3,21 +3,29 @@
   {
     "key": "tab",
     "command": "workbench.action.nextEditor",
-    "when": "editorTextFocus && vim.mode === 'Normal'"
+    "when": "editorTextFocus && vim.mode === 'Normal'",
   },
   {
     "key": "shift+tab",
     "command": "workbench.action.previousEditor",
-    "when": "editorTextFocus && vim.mode === 'Normal'"
+    "when": "editorTextFocus && vim.mode === 'Normal'",
   },
   {
     "key": "tab",
     "command": "tab",
-    "when": "editorTextFocus && !editorTabMovesFocus && !inlineSuggestionVisible && vim.mode != 'Normal'"
+    "when": "editorTextFocus && !editorTabMovesFocus && !inlineSuggestionVisible && vim.mode != 'Normal'",
   },
   {
     "key": "shift+tab",
     "command": "outdent",
-    "when": "editorTextFocus && !editorTabMovesFocus && !inlineSuggestionVisible && vim.mode != 'Normal'"
+    "when": "editorTextFocus && !editorTabMovesFocus && !inlineSuggestionVisible && vim.mode != 'Normal'",
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
+  },
+  {
+    "key": "ctrl+f4",
+    "command": "-workbench.action.closeActiveEditor",
   },
 ]
