@@ -6,7 +6,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "redhat.telemetry.enabled": false,
   "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml"
+    "editor.defaultFormatter": "redhat.vscode-xml",
   },
   "security.workspace.trust.untrustedFiles": "open",
   "editor.minimap.autohide": "mouseover",
@@ -17,101 +17,71 @@
   "vim.leader": "<space>",
   "vim.useSystemClipboard": true,
   "extensions.experimental.affinity": {
-    "vscode.vim": 1
+    "vscode.vim": 1,
   },
   "vim.smartRelativeLine": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>",
-        "w"
-      ],
-      "commands": [
-        "workbench.action.closeOtherEditors"
-      ]
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.closeActiveEditor"],
+      "when": "editorTextFocus && vim.mode === 'Normal'",
     },
     {
-      "before": [
-        "<leader>",
-        "s",
-        "l"
-      ],
-      "commands": [
-        "workbench.action.splitEditorRight"
-      ]
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeOtherEditors"],
+      "when": "editorTextFocus && vim.mode === 'Normal'",
     },
     {
-      "before": [
-        "<leader>",
-        "f",
-        "h"
-      ],
-      "commands": [
-        "workbench.action.focusLeftGroup"
-      ]
+      "before": ["<leader>", "s", "h"],
+      "commands": ["workbench.action.moveEditorToLeftGroup"],
+      "when": "editorTextFocus && vim.mode === 'Normal'",
     },
     {
-      "before": [
-        "<leader>",
-        "f",
-        "l"
-      ],
-      "commands": [
-        "workbench.action.focusRightGroup"
-      ]
-    }
+      "before": ["<leader>", "s", "l"],
+      "commands": ["workbench.action.moveEditorToRightGroup"],
+      "when": "editorTextFocus && vim.mode === 'Normal'",
+    },
+    {
+      "before": ["<leader>", "f", "h"],
+      "commands": ["workbench.action.focusLeftGroup"],
+      "when": "editorTextFocus && vim.mode === 'Normal'",
+    },
+    {
+      "before": ["<leader>", "f", "l"],
+      "commands": ["workbench.action.focusRightGroup"],
+      "when": "editorTextFocus && vim.mode === 'Normal'",
+    },
   ],
   "vim.normalModeKeyBindings": [
     {
-      "before": [
-        "g",
-        "i"
-      ],
-      "commands": [
-        "editor.action.goToImplementation"
-      ]
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"],
+      "when": "editorTextFocus && vim.mode === 'Normal'",
     },
     // Harpoon config
     {
-      "before": [
-        "<leader>",
-        "a",
-      ],
-      "commands": [
-        "vscode-harpoon.addEditor"
-      ]
+      "before": ["<leader>", "a"],
+      "commands": ["vscode-harpoon.addEditor"],
+      "when": "editorTextFocus && vim.mode === 'Normal'",
     },
     {
-      "before": [
-        "<leader>",
-        "e",
-      ],
-      "commands": [
-        "vscode-harpoon.editEditors"
-      ]
+      "before": ["<leader>", "e"],
+      "commands": ["vscode-harpoon.editEditors"],
+      "when": "editorTextFocus && vim.mode === 'Normal'",
     },
     {
-      "before": [
-        "<leader>",
-        "p"
-      ],
-      "commands": [
-        "vscode-harpoon.editorQuickPick"
-      ]
+      "before": ["<leader>", "p"],
+      "commands": ["vscode-harpoon.editorQuickPick"],
+      "when": "editorTextFocus && vim.mode === 'Normal'",
     },
   ],
   "vim.visualModeKeyBindings": [
     // Enables commenting in visual mode
     {
-      "before": [
-        "<leader>",
-        "c"
-      ],
-      "commands": [
-        "editor.action.commentLine"
-      ],
-      "when": "editorTextFocus && !editorReadonly"
-    }
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.commentLine"],
+      "when": "editorTextFocus && !editorReadonly",
+    },
   ],
   "workbench.colorTheme": "Palenight (Mild Contrast)",
 }
