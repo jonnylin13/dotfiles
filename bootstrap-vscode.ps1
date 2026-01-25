@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 
 # --- Install extensions ---
-Get-Content ./config/ssh/vscode/extensions.txt | ForEach-Object {
+Get-Content ./config/vscode/extensions.txt | ForEach-Object {
     code --install-extension $_
 }
 
