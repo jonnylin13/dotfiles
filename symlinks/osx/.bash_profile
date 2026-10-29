@@ -1,1 +1,0 @@
-/Users/jonny/.bash_profile

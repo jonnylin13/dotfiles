@@ -1,0 +1,14 @@
+# Local overrides & secrets
+*.local
+*.local.*
+.env*
+*.key
+*.pem
+id_rsa*
+id_ed25519*
+
+# OS & Editor Cruft
+.DS_Store
+*.swp
+*.bak
+*~

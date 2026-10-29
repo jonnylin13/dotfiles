@@ -1,0 +1,7 @@
+[user]
+	email = jonnylin13@gmail.com
+	name = jonnylin13
+[pull]
+	rebase = false
+[include]
+	path = ~/.gitconfig.local
